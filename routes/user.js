@@ -1,11 +1,7 @@
 const router = require('express').Router()
 
 // controllers
-const {getUsers} = require('../controllers/user')
-const {currentUsers} = require('../controllers/user')
-const {allUsers} = require('../controllers/user')
-const {allOneUsers} = require('../controllers/user')
-const {anotherUsers} = require('../controllers/user')
+const {getUsers, anotherUsers, currentUsers, allUsers , allOneUsers} = require('../controllers/user')
 
 // check validation
 const {isValidate} = require('../middlewares/validation')
