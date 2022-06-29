@@ -68,23 +68,23 @@ exports.updateUser = async (req, res) => {
 }
 
 
-// get current users 
-// const currentUsers = (req, res)=>{
+// // get current users 
+// exports.currentUsers = (req, res)=>{
 //     res.send('Get current users ')
 //  }
 
 // // get all users 
-// const allUsers = (req, res)=>{
+// exports.allUsers = (req, res)=>{
 //     res.send('Get All users ')
 //  }
 
 // // get one user from all
-// const allOneUsers = (req, res)=>{
+// exports.allOneUsers = (req, res)=>{
 //     res.send('Get one user from the all users')
 //  }
 
 // // get another pull user 
-// const anotherUsers = (req, res)=>{
+// exports.anotherUsers = (req, res)=>{
 //     res.send('Get new all another pull users')
 //  }
 

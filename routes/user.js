@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
 // controllers
-const {addUser , getUsers , updateUser , deleteUser , getOneUsersById} = require('../controllers/user')
+const {addUser , getUsers , updateUser , deleteUser , getOneUsersById } = require('../controllers/user')
 
 // check validation
 const {isValidate} = require('../middlewares/validation')

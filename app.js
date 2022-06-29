@@ -13,7 +13,6 @@ app.use(express.json())
 app.use(morgan('dev'));
 
 // database connection 
-console.log(process.env.CONNECTION_URL)
 connect(process.env.CONNECTION_URL)
   .then(() => console.log('MongoDB connection successfull'))
   .catch((error) => console.log(`Error to connect db ${error}`));
