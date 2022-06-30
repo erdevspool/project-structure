@@ -26,7 +26,13 @@ exports.updateUserValidation = [
             throw('Name should be more than 4 letters')
         }
     }),
-    check('email').isLowercase().isEmail().withMessage('Invalid Email'),
+
+    check('email').custom(async(email)=>{
+            const valid = regex.test(email)
+            if(valid == false){
+                throw('Invalid Email')
+            }
+    }),
 
     check('phone').custom(async(phone)=>{
         if(phone){

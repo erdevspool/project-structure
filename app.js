@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan')
-const userRouter = require('./routes/user')
-const productRouter = require('./routes/products')
 require('dotenv').config()
 const {connect} = require('mongoose')
+
+
+const userRouter = require('./routes/user')
+const productRouter = require('./routes/products')
 
 // app middlewares 
 app.use(cors({}));
