@@ -1,7 +1,9 @@
 const router = require('express').Router()
 
 // controllers
-const {addUser , getUsers , updateUser , deleteUser , getOneUsersById } = require('../controllers/user')
+const {addUser , getUsers , updateUser , deleteUser , getOneUsersById } = require('../controllers/user');
+const {addUserValidation , updateUserValidation} = require('../validator/user')
+const validationResult = require('../validator')
 
 // check validation
 const {isValidate} = require('../middlewares/validation')
@@ -12,10 +14,10 @@ const {isAuth} = require('../middlewares/validation')
 router.get('/' ,  getUsers);
 
 // add or post users 
-router.post('/' ,  addUser);
+router.post('/' , addUserValidation, validationResult ,   addUser);
 
 // update or patch a user
-router.patch('/:id' , updateUser );
+router.patch('/:id' , updateUserValidation ,validationResult ,  updateUser );
 
 // delete a user 
 router.delete('/:id' , deleteUser );
